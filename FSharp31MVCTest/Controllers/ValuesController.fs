@@ -5,6 +5,12 @@ open System.Linq
 open System.Net.Http
 open System.Web.Http
 
+// Test
+type Shape =
+    | Rectangle of width : float * length : float
+    | Circle of radius : float
+    | Prism of width : float * float * height : float
+
 /// Retrieves values.
 [<RoutePrefix("api2/values")>]
 type ValuesController() =
