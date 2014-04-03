@@ -4,12 +4,16 @@ open System.Collections.Generic
 open System.Linq
 open System.Net.Http
 open System.Web.Http
+open Microsoft.FSharp.Data.TypeProviders
 
-// Test
+// Test for F# 3.1
 type Shape =
     | Rectangle of width : float * length : float
     | Circle of radius : float
     | Prism of width : float * float * height : float
+
+// Test for WsdlService
+type terraService = Microsoft.FSharp.Data.TypeProviders.WsdlService<"http://www.wcc.nrcs.usda.gov/awdbWebService/services?WSDL">
 
 /// Retrieves values.
 [<RoutePrefix("api2/values")>]
