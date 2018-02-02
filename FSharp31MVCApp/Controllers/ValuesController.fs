@@ -13,7 +13,7 @@ type Shape =
     | Prism of width : float * float * height : float
 
 // Test for WsdlService
-type terraService = Microsoft.FSharp.Data.TypeProviders.WsdlService<"http://www.wcc.nrcs.usda.gov/awdbWebService/services?WSDL">
+type terraService = Microsoft.FSharp.Data.TypeProviders.WsdlService<"http://api.microsofttranslator.com/V2/Soap.svc">
 
 /// Retrieves values.
 [<RoutePrefix("api2/values")>]
